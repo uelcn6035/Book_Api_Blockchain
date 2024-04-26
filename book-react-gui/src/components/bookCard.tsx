@@ -99,7 +99,7 @@ const handleBorrow = () => {
   const fetchBalance = async () => {
     try {
       console.log('fetchBalance is called');
-      const response = await fetch('https://upgraded-robot-pvpwwjjgj9pc76wx-3000.app.github.dev/api/config/balance');
+      const response = await fetch('https://legendary-dollop-44wvvjjg74xfqq6r-3000.app.github.dev/api/config/balance');
       const data = await response.json();
       setBalanceFetched(data.balance); // Update balanceFetched with the fetched balance
     } catch (error) {
@@ -168,7 +168,7 @@ const handleBorrow = () => {
           onClick={async () => {
             setButtonText("Fetching Wallet...");
             try {
-              const response = await fetch('https://upgraded-robot-pvpwwjjgj9pc76wx-3000.app.github.dev/api/config/balance');
+              const response = await fetch('https://legendary-dollop-44wvvjjg74xfqq6r-3000.app.github.dev/api/config/balance');
               const data = await response.json();
               await new Promise(resolve => setTimeout(resolve, 2000)); // Add delay here
               setButtonText(`Balance: ${data.balance}`);
