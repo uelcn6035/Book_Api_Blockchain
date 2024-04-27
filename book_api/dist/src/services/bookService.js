@@ -1,6 +1,9 @@
+// Importing faker for generating fake data
 import faker from 'faker';
 import { storeBookData } from "../helpers/helper.js";
+// Function to generate book data
 export const generateBookData = (title) => {
+    // Generating book data using faker
     const generatedBookData = {
         title,
         image: `https://picsum.photos/200/300`,
@@ -26,6 +29,7 @@ export const generateBookData = (title) => {
     const bookDataToStore = { ...generatedBookData };
     delete bookDataToStore.content;
     delete bookDataToStore.summary;
+    // Storing the book data
     storeBookData(bookDataToStore).catch(console.error);
     return generatedBookData;
 };
