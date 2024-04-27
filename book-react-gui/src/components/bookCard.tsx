@@ -278,7 +278,6 @@ const handleBorrow = () => {
       <Divider />
       <CardFooter>
         <div className="flex flex-col items-left">
-          {error && <p className="text-xs text-red-600 ">{error}</p>}
           {data && !showCloseSession && (
             <p className="text-xs  text-gray-600 ">Last update successful.</p>
           )}
